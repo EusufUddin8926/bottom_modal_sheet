@@ -43,7 +43,14 @@ class _HomePageState extends State<HomePage> {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
         child: Icon(Icons.add, color: Colors.white),
         onPressed: () {
-          addCourseImage();
+          // addCourseImage();
+
+          showModalBottomSheet(
+              context: context,
+               backgroundColor: Colors.white,
+               builder: (context) => AddNewCourse(),
+
+          );
         },
       ),
       body: CourseList.isNotEmpty ? ListView.separated(
